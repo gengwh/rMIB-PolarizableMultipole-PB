@@ -1,4 +1,4 @@
-# rMIB-PB
+# MIB-PMPB
 This is the repo for the code for solving the Polarizable Multipole Poisson-Boltzmann (PMPB) model using regularized Matched Interface and Boundary (rMIB) method.
 
 
