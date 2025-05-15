@@ -1,0 +1,11 @@
+fname multipole_test
+dcel 0.0625
+den 10
+epsp 1
+epsw 80
+bulk_strength 0.0
+icg 2
+isf 0
+ibd 0
+inl 0
+ipm 1
