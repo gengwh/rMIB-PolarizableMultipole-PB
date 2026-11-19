@@ -2081,13 +2081,13 @@ integer it(6), id(6), iwts(16,3), idx(3), idy(3)
 				
 					if (id(1)==1) then
 						aa(1,1)=-cy(1,2)*wyn(3);		aa(1,2)=-cz(1,2)*wzn(3)
-						aa(2,1)=-cy(2,2)*wyn(3);		aa(1,2)=-cz(2,2)*wzn(3)
+						aa(2,1)=-cy(2,2)*wyn(3);		aa(2,2)=-cz(2,2)*wzn(3)
 					elseif (id(2)==1) then
 						aa(1,1)=-cx(1,2)*wxn(3);		aa(1,2)=-cz(1,2)*wzn(3)
-						aa(2,1)=-cx(2,2)*wxn(3);		aa(1,2)=-cz(2,2)*wzn(3)
+						aa(2,1)=-cx(2,2)*wxn(3);		aa(2,2)=-cz(2,2)*wzn(3)
 					else
 						aa(1,1)=-cx(1,2)*wxn(3);		aa(1,2)=-cy(1,2)*wyn(3)
-						aa(2,1)=-cx(2,2)*wxn(3);		aa(1,2)=-cy(2,2)*wyn(3)
+						aa(2,1)=-cx(2,2)*wxn(3);		aa(2,2)=-cy(2,2)*wyn(3)
 					endif
 					
 					dta=(aa(1,1)*aa(2,2)-aa(1,2)*aa(2,1))
@@ -2159,7 +2159,7 @@ integer it(6),id(6),iwts(16,3),idx(3)
 	a(3,1)=wxn(3)*p(3,1);		a(3,2)=wyn(3)*p(3,2);		a(3,3)=wzn(3)*p(3,3)
 	dta=a(1,1)*(a(2,2)*a(3,3)-a(2,3)*a(3,2))-a(1,2)*(a(2,1)*a(3,3)-a(2,3)*a(3,1))+a(1,3)*(a(2,1)*a(3,2)-a(2,2)*a(3,1))
 	print *,'lsf 3',dta
-	if (dta<1.d-10) return
+	if (abs(dta)<1.d-10) return
 	ck1=(/	-btn*wxn(1)*p(1,1),	&
 			 btp*(wxp(1)*p(1,1)+wyp(1)*p(1,2)+wzp(1)*p(1,3))-btn*(wxn(2)*p(1,1)+wyn(2)*p(1,2)+wzn(2)*p(1,3)), &
 			 btp*wxp(2)*p(1,1),	 btp*wxp(3)*p(1,1),	&
